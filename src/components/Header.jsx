@@ -22,7 +22,6 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
 
   const hanleLogout = () => {
     localStorage.clear()
-    window.location.href = "https://soldice.in/";
   }
 
   return (
