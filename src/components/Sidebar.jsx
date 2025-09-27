@@ -5,6 +5,7 @@ import DashboardIcon from "../assets/dashboard.png";
 import SubAdminIcon from "../assets/subadmin.png";
 import CustomerIcon from "../assets/customer2.png";
 import TechIcon from "../assets/tech.png";
+import DriverIcon from "../assets/driver.png";
 import ServiceRequestIcon from "../assets/service-req.png";
 import EarningIcons from "../assets/earning.png";
 import SettingsIcon from "../assets/setting.png";
@@ -38,29 +39,17 @@ const Sidebar = ({
       path: "/customer",
     },
     {
-      id: "technician",
+      id: "driver",
+      icon: DriverIcon,
+      label: "Driver Management",
+      path: "/driver-management",
+    },
+    {
+      id: "booking",
       icon: TechIcon,
-      label: "Technician Management",
-      path: "/technician",
+      label: "Booking Management",
+      path: "/booking-management",
     },
-    {
-      id: "service",
-      icon: ServiceRequestIcon,
-      label: "Service Request Manager",
-      path: "/service",
-    },
-    {
-      id: "earnings",
-      icon: EarningIcons,
-      label: "Earnings & Payout",
-      path: "/earnings",
-    },
-    // {
-    //   id: "account",
-    //   icon: SettingsIcon,
-    //   label: "Account Settings",
-    //   path: "/account",
-    // },
   ];
 
   const handleNavigation = (item) => {
@@ -109,14 +98,13 @@ const Sidebar = ({
             onClick={() => handleNavigation(item)}
             className={`outline-none cursor-pointer focus:outline-none w-full flex items-center space-x-3 px-3 lg:px-4 py-2 lg:py-3 text-left transition-colors relative ${
               activeItem === item.id
-                ? "bg-[#0C94D21A] text-[#0C94D2] border-l-4 border-[#1D0EC7]"
+                ? "bg-[rgba(232,106,43,0.1)] text-[#e86a2b] border-l-4 border-[#E86A2B]"
                 : "text-gray-600 hover:bg-gray-50"
             }`}
           >
-           
             <div
               className={`w-6 h-6 lg:w-6 lg:h-6 flex-shrink-0 ${
-                activeItem === item.id ? "bg-[#0C94D2]" : "bg-gray-400"
+                activeItem === item.id ? "bg-[#e86a2b]" : "bg-gray-400"
               }`}
               style={{
                 maskImage: `url(${item.icon})`,

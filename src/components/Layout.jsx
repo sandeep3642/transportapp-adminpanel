@@ -9,7 +9,7 @@ const Layout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // const path = location.pathname.replace("/", "") || "/";
+    const path = location.pathname.replace("/", "") || "/";
 
     // Method 1: Explicit mapping (more control)
     const routeMapping = {
@@ -20,8 +20,8 @@ const Layout = () => {
       "service-detail": "service",
       "spare-part-detail": "service",
       "add-new-technician": "technician",
-      "subadmin-view":"sub-admin",
-      "create-payout":"earnings",
+      "subadmin-view": "sub-admin",
+      "create-payout": "earnings",
       activityLog: "service",
       // Add more mappings as needed
     };
@@ -42,11 +42,9 @@ const Layout = () => {
         const validParents = [
           "sub-admin",
           "customer",
-          "technician",
+          "driver",
           "dashboard",
-          "service",
-          "reports",
-          "settings",
+          "booking",
         ];
 
         if (validParents.includes(potentialParent)) {

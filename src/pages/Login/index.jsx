@@ -1,10 +1,19 @@
 import { useState } from "react";
 import HeroImage from "../../assets/hero.png";
 import LogoImage from "../../assets/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function HaulixLogin() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleClick = () => {
+    // Perform login logic here
+    console.log("Email:", email);
+    console.log("Password:", password);
+    navigate("/driver-management");
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
@@ -62,6 +71,7 @@ export default function HaulixLogin() {
               {/* Login Button */}
               <button
                 type="button"
+                onClick={handleClick}
                 className="w-full bg-[#E86A2B] text-white font-semibold py-4 rounded-lg hover:bg-orange-600 transition-colors text-lg mt-8"
               >
                 Login
