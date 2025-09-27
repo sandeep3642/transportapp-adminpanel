@@ -9,6 +9,7 @@ import "./App.css";
 import { UserProvider } from "./context/UserContext";
 import PrivateRoute from "./utilty/PrivateRoute";
 import PublicRoute from "./utilty/PublicRoute";
+import DriverRegistration from "./pages/Driver/DriverRegistration";
 const Driver = lazy(() => import("./pages/Driver"));
 
 
@@ -34,6 +35,7 @@ function App() {
             <Route element={<PrivateRoute />}>
               <Route element={<Layout />}>
                 <Route path="/driver-management" element={<Driver />} />
+                <Route path="/driver-register" element={<DriverRegistration />} />
                 <Route path="/customer" element={<Driver />} />
                 <Route path="/booking-management" element={<Driver />} />
                 <Route path="/dashboard" element={<Driver />} />
