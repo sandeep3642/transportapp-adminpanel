@@ -4,12 +4,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "./components/Layout";
 import Loader from "./utilty/Loader";
-const Login = lazy(() => import("./pages/Login"));
 import "./App.css";
 import { UserProvider } from "./context/UserContext";
 import PrivateRoute from "./utilty/PrivateRoute";
 import PublicRoute from "./utilty/PublicRoute";
 import DriverRegistration from "./pages/Driver/DriverRegistration";
+import DriverView from "./pages/Driver/DriverView";
+const Login = lazy(() => import("./pages/Login"));
 const Driver = lazy(() => import("./pages/Driver"));
 
 
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/customer" element={<Driver />} />
                 <Route path="/booking-management" element={<Driver />} />
                 <Route path="/dashboard" element={<Driver />} />
+                <Route path="/driver-view" element={<DriverView />} />
               </Route>
             </Route>
           </Routes>
