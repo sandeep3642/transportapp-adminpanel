@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Search, Bell, ChevronDown, Menu, X, LogOut } from "lucide-react";
 import UserIcon from "../assets/user.png";
 import { useUser } from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({ sidebarOpen, setSidebarOpen }) => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
-
+  const navigate = useNavigate()
   const { user } = useUser();
 
   // Close dropdown when clicking outside
@@ -21,7 +22,8 @@ const Header = ({ sidebarOpen, setSidebarOpen }) => {
   }, [showProfileMenu]);
 
   const hanleLogout = () => {
-    localStorage.clear()
+    localStorage.clear();
+    navigate("/")
   }
 
   return (
