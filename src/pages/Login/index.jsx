@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 
 export default function HaulixLogin() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("superadmin@soldice.in");
-  const [password, setPassword] = useState("Qicapp@2025");
+  const [email, setEmail] = useState("diwakar@qicapp.com");
+  const [password, setPassword] = useState("Diwakar@1991");
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async () => {
@@ -72,7 +72,6 @@ export default function HaulixLogin() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none"
-                      maxLength="6"
                     />
                     <div className="mt-2">
                       <span className="text-gray-600 text-sm">
