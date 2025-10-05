@@ -184,7 +184,7 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
           </div>
         )}
 
-        {/* Selfie Section - Responsive */}
+        {/* Driving License Section - Responsive */}
         {profileData?.selfies?.length > 0 && (
           <div className="w-full">
             {profileData.selfies.map((selfie) => (
@@ -210,7 +210,7 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
         )}
 
 
-        {/* Police Verification Section - Responsive */}
+        {/* Driving  Rc Section - Responsive */}
         {profileData?.policeVerifications?.length > 0 && (
           <div className="w-full">
             {profileData.policeVerifications.map((doc) => (
@@ -281,22 +281,35 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
         </div>
 
         {/* Skills & Expertise Card - Responsive */}
-        <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 w-full">
-          <h4 className="text-base sm:text-lg border-b border-gray-200 font-semibold text-[#121212] mb-4">
-            Skills & Expertise
-          </h4>
-          <div className="space-y-2">
-            <div className="flex flex-wrap gap-2">
-              {profileData?.skillsAndExpertise?.skills?.map((skill, index) => (
-                <span
-                  key={index}
-                  className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                >
-                  {skill}
-                </span>
-              )) || (
-                  <span className="text-sm text-[#121212]">No skills listed</span>
-                )}
+         <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 w-full">
+          <h3 className="text-base sm:text-lg border-b border-gray-200 font-semibold text-[#121212] mb-4 sm:mb-6">
+            Vehicle Details
+          </h3>
+
+          <div className="space-y-3">
+            <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
+              <span className="text-sm text-[#121212] font-medium">Vehicle Type:</span>
+              <span className="text-sm font-medium text-[#121212]">
+                {profileData?.profileSummary?.phone ?? "NA"}
+              </span>
+            </div>
+
+            <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
+              <span className="text-sm text-[#121212] font-medium">
+                Vehicle Category:
+              </span>
+              <span className="text-sm font-medium text-[#121212]">
+                {profileData?.contactInformation?.alternateContact ?? "NA"}
+              </span>
+            </div>
+
+            <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
+              <span className="text-sm text-[#121212] font-medium">
+                Registration No.:
+              </span>
+              <span className="text-sm font-medium text-[#121212] text-right break-words">
+                {profileData?.contactInformation?.address ?? "NA"}
+              </span>
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-// src/features/auth/authService.js
 import api from "../../services/apiService";
 
 export const fetchDriversList = async (page = 1, limit = 10,search="") => {
@@ -6,12 +5,12 @@ export const fetchDriversList = async (page = 1, limit = 10,search="") => {
   return res.data;
 };
 
-export const fetchDriverDetail = async (id) => {
+export const fetchDriverDetail = async (id ="685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.get(`/api/v1/user/Drivers/profileInfo/${id}`);
   return res.data;
 };
 
-export const approveRejectDocument = async (payload, id) => {
+export const approveRejectDocument = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.post(
     `/api/v1/user/Drivers/documents/${id}/approveReject`,
     payload
@@ -19,7 +18,7 @@ export const approveRejectDocument = async (payload, id) => {
   return res.data;
 };
 
-export const blockUnblock = async (payload, id) => {
+export const blockUnblock = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.post(
     `/api/v1/user/Drivers/profile/${id}/blockUnblock`,
     payload
@@ -27,7 +26,7 @@ export const blockUnblock = async (payload, id) => {
   return res.data;
 };
 
-export const approveRejectProfile = async (payload, id) => {
+export const approveRejectProfile = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.post(
     `/api/v1/user/Drivers/profile/${id}/approveReject`,
     payload

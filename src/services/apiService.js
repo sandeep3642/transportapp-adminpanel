@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const api = axios.create({
-  baseURL: "https://serviceapp.trendingobjects.com/",
+  baseURL: "https://transport.trendingobjects.com/",
   headers: {
     "Content-Type": "application/json",
   },

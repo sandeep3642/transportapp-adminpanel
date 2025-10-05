@@ -140,25 +140,25 @@ const RenderServiceHistory = ({ statsData, id }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
         <StatsCard
           src={RightIcon}
-          title="Jobs Accepted"
+          title="Trips Accepted"
           value={statsData?.stats?.totalAcceptedJob}
           color="blue"
         />
         <StatsCard
           src={WrongIcon}
-          title="Jobs Rejected"
+          title="Trips Rejected"
           value={statsData?.stats?.totalJobRejected}
           color="blue"
         />
         <StatsCard
           src={ServiceRequestIcon}
-          title="Completed Services"
+          title="Trips Completed"
           value={statsData?.stats?.completedJobs}
           color="blue"
         />
         <StatsCard
           src={RefreshIcon}
-          title="Ongoing Services"
+          title="Ongoing Trips"
           value={statsData?.stats?.ongoingServices}
           color="blue"
         />
