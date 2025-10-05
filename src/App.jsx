@@ -10,6 +10,8 @@ import PrivateRoute from "./utilty/PrivateRoute";
 import PublicRoute from "./utilty/PublicRoute";
 import DriverRegistration from "./pages/Driver/DriverRegistration";
 import DriverView from "./pages/Driver/DriverView";
+import CustomerTable from "./pages/Customer";
+import CustomerView from "./pages/Customer/customerView";
 const Login = lazy(() => import("./pages/Login"));
 const Driver = lazy(() => import("./pages/Driver"));
 
@@ -37,7 +39,8 @@ function App() {
               <Route element={<Layout />}>
                 <Route path="/driver-management" element={<Driver />} />
                 <Route path="/driver-register" element={<DriverRegistration />} />
-                <Route path="/customer" element={<Driver />} />
+                <Route path="/customer" element={<CustomerTable />} />
+                <Route path="customer-view" element={<CustomerView />} />
                 <Route path="/booking-management" element={<Driver />} />
                 <Route path="/dashboard" element={<Driver />} />
                 <Route path="/driver-view" element={<DriverView />} />

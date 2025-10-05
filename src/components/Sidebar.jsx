@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 import DashboardIcon from "../assets/dashboard.png";
+import CustomerIcon from "../assets/customer.png"
 import SubAdminIcon from "../assets/subadmin.png";
-import CustomerIcon from "../assets/customer2.png";
 import TechIcon from "../assets/tech.png";
 import DriverIcon from "../assets/driver.png";
 import ServiceRequestIcon from "../assets/service-req.png";

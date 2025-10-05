@@ -10,6 +10,7 @@ export default function HaulixLogin() {
 
   const handleClick = () => {
     // Perform login logic here
+    localStorage.setItem("token",12345)
     console.log("Email:", email);
     console.log("Password:", password);
     navigate("/driver-management");
