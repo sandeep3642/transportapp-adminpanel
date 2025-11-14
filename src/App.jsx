@@ -53,7 +53,6 @@ function App() {
                   path="/booking-details/:id"
                   element={<BookingDetails />}
                 />
-                <Route path="/dashboard" element={<Driver />} />
                 <Route path="/booking-management" element={<Driver />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/driver-view" element={<DriverView />} />
