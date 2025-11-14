@@ -1,12 +1,12 @@
 import api from "../../services/apiService";
 
 export const fetchDriversList = async (page = 1, limit = 10,search="") => {
-  const res = await api.get(`/api/v1/user/Drivers?page=${page}&limit=${limit}&search=${search}`);
+  const res = await api.get(`/api/v1/user/drivers?page=${page}&limit=${limit}&search=${search}`);
   return res.data;
 };
 
-export const fetchDriverDetail = async (id ="685f9ca00cd9a45b01dc5e4c") => {
-  const res = await api.get(`/api/v1/user/Drivers/profileInfo/${id}`);
+export const fetchDriverDetail = async (id ="6917417928a33af45cebfd7f") => {
+  const res = await api.get(`/api/v1/user/drivers/profileInfo/${id}`);
   return res.data;
 };
 
@@ -20,7 +20,7 @@ export const approveRejectDocument = async (payload, id= "685f9ca00cd9a45b01dc5e
 
 export const blockUnblock = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.post(
-    `/api/v1/user/Drivers/profile/${id}/blockUnblock`,
+    `/api/v1/user/drivers/profile/${id}/blockUnblock`,
     payload
   );
   return res.data;
@@ -28,14 +28,14 @@ export const blockUnblock = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
 
 export const approveRejectProfile = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.post(
-    `/api/v1/user/Drivers/profile/${id}/approveReject`,
+    `/api/v1/user/drivers/profile/${id}/approveReject`,
     payload
   );
   return res.data;
 };
 
 export const driverStats = async (id) => {
-  const res = await api.get(`/api/v1/user/Drivers/stats/${id}`);
+  const res = await api.get(`/api/v1/user/drivers/stats/${id}`);
   return res.data;
 };
 

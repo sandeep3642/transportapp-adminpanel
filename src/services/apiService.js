@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 
 const api = axios.create({
   baseURL: "https://transport.trendingobjects.com/",
+  //  baseURL: "https://apis.haulix.in/",
   headers: {
     "Content-Type": "application/json",
   },

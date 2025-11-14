@@ -14,8 +14,11 @@ import CustomerTable from "./pages/Customer";
 import CustomerView from "./pages/Customer/customerView";
 import Booking from "./pages/Booking";
 import BookingDetails from "./pages/Booking/BookingDetails";
+
+import Dashboard from "./pages/Dashboard";
 const Login = lazy(() => import("./pages/Login"));
 const Driver = lazy(() => import("./pages/Driver"));
+const SubAdmin = lazy(()=>import("./pages/sub-admin/index.jsx"))
 
 function App() {
   return (
@@ -51,7 +54,10 @@ function App() {
                   element={<BookingDetails />}
                 />
                 <Route path="/dashboard" element={<Driver />} />
+                <Route path="/booking-management" element={<Driver />} />
+                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/driver-view" element={<DriverView />} />
+                <Route path="/sub-admin" element={<SubAdmin />} />
               </Route>
             </Route>
           </Routes>
