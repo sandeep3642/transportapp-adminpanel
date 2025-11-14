@@ -12,16 +12,17 @@ import DriverRegistration from "./pages/Driver/DriverRegistration";
 import DriverView from "./pages/Driver/DriverView";
 import CustomerTable from "./pages/Customer";
 import CustomerView from "./pages/Customer/customerView";
+import Booking from "./pages/Booking";
+import BookingDetails from "./pages/Booking/BookingDetails";
 const Login = lazy(() => import("./pages/Login"));
 const Driver = lazy(() => import("./pages/Driver"));
-
 
 function App() {
   return (
     <UserProvider>
       <Router>
         {/* <TokenHandler /> */}
-         {/* 👈 Add this before <Suspense> */}
+        {/* 👈 Add this before <Suspense> */}
         <Suspense fallback={<Loader />}>
           <ToastContainer
             position="top-right"
@@ -38,10 +39,17 @@ function App() {
             <Route element={<PrivateRoute />}>
               <Route element={<Layout />}>
                 <Route path="/driver-management" element={<Driver />} />
-                <Route path="/driver-register" element={<DriverRegistration />} />
+                <Route
+                  path="/driver-register"
+                  element={<DriverRegistration />}
+                />
                 <Route path="/customer" element={<CustomerTable />} />
                 <Route path="customer-view" element={<CustomerView />} />
-                <Route path="/booking-management" element={<Driver />} />
+                <Route path="/booking-management" element={<Booking />} />
+                <Route
+                  path="/booking-details/:id"
+                  element={<BookingDetails />}
+                />
                 <Route path="/dashboard" element={<Driver />} />
                 <Route path="/driver-view" element={<DriverView />} />
               </Route>
