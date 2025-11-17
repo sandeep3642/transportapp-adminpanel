@@ -28,7 +28,7 @@ const DriverView = () => {
   const tabs = [
     "Profile Info",
     "Service History",
-    "Performance Metrics",
+    "Ratings & Reviews",
     "Earning Summary",
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -329,7 +329,7 @@ const DriverView = () => {
         {activeTab === "Service History" && (
           <RenderServiceHistory statsData={statsData} id={location?.state} />
         )}
-        {activeTab === "Performance Metrics" && <RenderPerformanceMetrics />}
+        {activeTab === "Ratings & Reviews" && <RenderPerformanceMetrics />}
 
         {activeTab === "Earning Summary" && (
           <EarningSummary

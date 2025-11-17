@@ -187,12 +187,12 @@ const DriverTable = () => {
                   <th className="text-left p-4 text-sm font-medium text-gray-700">
                     Name
                   </th>
-                  <th className="text-left p-4 text-sm font-medium text-gray-700">
+                  {/* <th className="text-left p-4 text-sm font-medium text-gray-700">
                     Email
                   </th>
                   <th className="text-left p-4 text-sm font-medium text-gray-700">
                     Mobile No.
-                  </th>
+                  </th> */}
                   <th className="text-left p-4 text-sm font-medium text-gray-700">
                     Vehicle
                   </th>
@@ -239,8 +239,8 @@ const DriverTable = () => {
                         {driver.id || driver._id}
                       </td>
                       <td className="p-4 text-sm text-gray-900">{driver.name}</td>
-                      <td className="p-4 text-sm text-blue-600">{driver.email}</td>
-                      <td className="p-4 text-sm text-gray-900">{driver.mobile || driver.phone}</td>
+                      {/* <td className="p-4 text-sm text-blue-600">{driver.email}</td>
+                      <td className="p-4 text-sm text-gray-900">{driver.mobile || driver.phone}</td> */}
                       <td className="p-4 text-sm text-gray-900">
                         {driver.vehicleCategory || driver.vehicleCategory || "N/A"}
                       </td>

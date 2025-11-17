@@ -12,7 +12,7 @@ export const fetchDriverDetail = async (id ="6917417928a33af45cebfd7f") => {
 
 export const approveRejectDocument = async (payload, id= "685f9ca00cd9a45b01dc5e4c") => {
   const res = await api.post(
-    `/api/v1/user/Drivers/documents/${id}/approveReject`,
+    `/api/v1/user/drivers/documents/  ${id}/approveReject`,
     payload
   );
   return res.data;
@@ -45,7 +45,7 @@ export const fetchServiceRequests = async (payload) => {
 };
 
 export const addDriver = async (payload) => {
-  const res = await api.post(`/api/v1/user/Drivers/create`, payload);
+  const res = await api.post(`/api/v1/user/drivers/create`, payload);
   return res.data;
 };
 
