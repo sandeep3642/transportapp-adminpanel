@@ -176,15 +176,15 @@ const DriverView = () => {
 
   async function getDriverEarnings(id) {
     try {
-      const response = await fetchDriverEarningDetail(id, "last30Days");
+      // const response = await fetchDriverEarningDetail(id, "last30Days");
 
-      const { data, status } = response;
+      // const { data, status } = response;
 
-      if (status.success && data) {
-        setDriverEarningSummary(data);
-      }
+      // if (status.success && data) {
+      //   setDriverEarningSummary(data);
+      // }
     } catch (error) {
-      toast.error("Failed to fetch Driver earnings");
+      // toast.error("Failed to fetch Driver earnings");
     }
   }
 
