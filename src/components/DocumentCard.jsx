@@ -63,7 +63,7 @@ const DocumentCard = ({
                         </a>
                     </>
                 )}
-                {status === "pending"|| status === "uploaded" && (
+                {status === "pending" && (
                     <>
                         <button
                             onClick={onApprove}
