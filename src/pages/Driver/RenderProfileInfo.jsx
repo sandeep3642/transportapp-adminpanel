@@ -9,7 +9,7 @@ import { approveRejectDocument } from "./driver";
 import DocumentCard from "../../components/DocumentCard";
 import { toast } from "react-toastify";
 
-const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
+const RenderProfileInfo = ({ profileData, fetchDriverDetailbyId }) => {
   const [showRejectionModal, setShowRejectionModal] = useState(false);
   const [showRejectModal, setShowRejectModal] = useState(false);
   const [documentId, setDocumetId] = useState("");
@@ -45,12 +45,13 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
     } catch (error) {
       console.log(error);
     } finally {
-      fetchTechnicianDetailbyId(profileData?.profileSummary?._id);
+      fetchDriverDetailbyId(profileData?.profileSummary?._id);
     }
     setShowRejectModal(false);
   };
 
   const handleApprove = async (id) => {
+    // debugger;
     try {
       let payload = { action: "approve" };
       const response = await approveRejectDocument(payload, id);
@@ -58,11 +59,13 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
       const { status, details } = response;
       if (status.success) {
         toast.success(status.message);
+
+         fetchDriverDetailbyId(profileData?.profileSummary?._id);
       }
     } catch (error) {
       console.log(error);
     } finally {
-      fetchTechnicianDetailbyId(profileData?.profileSummary?._id);
+      fetchDriverDetailbyId(profileData?.profileSummary?._id);
     }
   };
 
