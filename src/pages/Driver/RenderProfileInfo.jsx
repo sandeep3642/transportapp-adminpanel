@@ -288,10 +288,10 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
 
           <div className="space-y-3">
             <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
-              <span className="text-sm text-[#121212] font-medium">Vehicle Type:</span>
+              {/* <span className="text-sm text-[#121212] font-medium">Vehicle Type:</span>
               <span className="text-sm font-medium text-[#121212]">
                 {profileData?.profileSummary?.phone ?? "NA"}
-              </span>
+              </span> */}
             </div>
 
             <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
@@ -299,17 +299,17 @@ const RenderProfileInfo = ({ profileData, fetchTechnicianDetailbyId }) => {
                 Vehicle Category:
               </span>
               <span className="text-sm font-medium text-[#121212]">
-                {profileData?.contactInformation?.alternateContact ?? "NA"}
+                {profileData?.skillsAndExpertise?.vehicleCategory ?? "NA"}
               </span>
             </div>
 
             <div className="flex items-center justify-between gap-2 border-b border-gray-100 pb-2">
-              <span className="text-sm text-[#121212] font-medium">
+              {/* <span className="text-sm text-[#121212] font-medium">
                 Registration No.:
               </span>
               <span className="text-sm font-medium text-[#121212] text-right break-words">
                 {profileData?.contactInformation?.address ?? "NA"}
-              </span>
+              </span> */}
             </div>
           </div>
         </div>

@@ -82,31 +82,31 @@ const RenderServiceHistory = ({ statsData, id }) => {
   const fetchWorkHistory = async () => {
     try {
       setIsLoading(true);
-      const { fromDate: from, toDate: to } = getDateRange();
+      // const { fromDate: from, toDate: to } = getDateRange();
 
-      const payload = {
-        page: currentPage,
-        limit: rowsPerPage,
-        technicianId: id,
-        fromDate: from,
-        toDate: to,
-        search: search?.trim(),
-      };
+      // const payload = {
+      //   page: currentPage,
+      //   limit: rowsPerPage,
+      //   technicianId: id,
+      //   fromDate: from,
+      //   toDate: to,
+      //   search: search?.trim(),
+      // };
 
-      const response = await fetchServiceRequests(payload);
+      // const response = await fetchServiceRequests(payload);
 
-      if (response?.status?.success) {
-        const formattedRequests = response.details?.serviceRequests.map(
-          (req) => ({
-            ...req,
-            customerName: req.customer?.name || "N/A", // fallback if customer is undefined
-          })
-        );
+      // if (response?.status?.success) {
+      //   const formattedRequests = response.details?.serviceRequests.map(
+      //     (req) => ({
+      //       ...req,
+      //       customerName: req.customer?.name || "N/A", // fallback if customer is undefined
+      //     })
+      //   );
 
-        setServiceData(formattedRequests);
-        // setServiceData(response.details?.serviceRequests || []);
-        setTotalItems(response.details?.pagination?.total || 0);
-      }
+      //   setServiceData(formattedRequests);
+      //   // setServiceData(response.details?.serviceRequests || []);
+      //   setTotalItems(response.details?.pagination?.total || 0);
+      // }
     } catch (error) {
       console.error("Error:", error);
     } finally {
